@@ -12,7 +12,7 @@ import { MerchantService } from '../../service/merchant.service';
 export class ItemOfferDetailsComponent implements OnInit {
 
   constructor(private merchantService: MerchantService, @Inject(MAT_DIALOG_DATA) private itemOfferId: string, public dialogRef: MatDialogRef<ItemOfferDetailsComponent>) { }
-  CONTENT_NOT_INFORMED: string = "Not Informed"
+  DEFAULT_NOT_AVAILABLE: string = "N/A"
 
   readonly ICONS = {
     close: {
@@ -45,7 +45,7 @@ export class ItemOfferDetailsComponent implements OnInit {
 
   verifyExistsContent(contentToVerify: string | undefined | string[]): string | string[] {
     if (!contentToVerify || contentToVerify.length == 0) {
-      return this.CONTENT_NOT_INFORMED
+      return this.DEFAULT_NOT_AVAILABLE
     }
     return contentToVerify
   }

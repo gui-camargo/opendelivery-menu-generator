@@ -48,7 +48,7 @@
             </ng-container>
           </ng-container>
           <ng-template #notExist>
-            {{CONTENT_NOT_INFORMED}}
+            {{DEFAULT_NOT_AVAILABLE}}
           </ng-template>
 
         </li>
@@ -62,7 +62,7 @@
             </ng-container>
           </ng-container>
           <ng-template #notExist>
-            {{CONTENT_NOT_INFORMED}}
+            {{DEFAULT_NOT_AVAILABLE}}
           </ng-template>
         </li>
 
@@ -77,7 +77,7 @@
           </ng-container>
 
           <ng-template #notExist>
-            {{CONTENT_NOT_INFORMED}}
+            {{DEFAULT_NOT_AVAILABLE}}
           </ng-template>
         </li>
       </ul>
@@ -91,7 +91,8 @@
             {{getOptionGroupById(optionGroupId)?.name}}:
           </h6>
           <p class="m-0">OptionGroupId: {{optionGroupId}}</p>
-          <span class="option-group-min_max m-0 p-0"> Min: {{getOptionGroupById(optionGroupId)?.minPermitted}}, Max: {{getOptionGroupById(optionGroupId)?.maxPermitted}} </span>
+          <span class="option-group-min_max m-0 p-0"> Min: {{getOptionGroupById(optionGroupId)?.minPermitted}}, Max:
+            {{getOptionGroupById(optionGroupId)?.maxPermitted}} </span>
         </div>
 
         <div class="option-group__option my-3" *ngFor="let option of getOptionGroupById(optionGroupId)?.options">
@@ -100,7 +101,7 @@
               <img class="cicle-img" src="assets/images/icons/black-circle.png">
               <span class="option-name pl-2">{{getItemById(option?.itemId)?.name}}</span>
               <span class="option-max_permitted"> - Max Permitted: {{option?.maxPermitted}} </span>
-            </div>       
+            </div>
             <span class="option-value">{{option?.price?.value | currency:"BRL"}}</span>
           </div>
 
