@@ -13,6 +13,7 @@ export class ItemOfferDetailsComponent implements OnInit {
 
   constructor(private merchantService: MerchantService, @Inject(MAT_DIALOG_DATA) private itemOfferId: string, public dialogRef: MatDialogRef<ItemOfferDetailsComponent>) { }
   readonly DEFAULT_NOT_AVAILABLE: string = "N/A"
+  readonly DEFAULT_CURRENCY_PIPE: string = "BRL"
 
   readonly ICONS = {
     close: {
@@ -43,8 +44,8 @@ export class ItemOfferDetailsComponent implements OnInit {
     return this.merchantService.getItemById(itemId)
   }
 
-  verifyExistsContent(contentToVerify: string | undefined | string[]): string | string[] {
-    if (!contentToVerify || contentToVerify.length == 0) {
+  verifyExistsContent(contentToVerify: string | boolean | undefined): string | boolean {
+    if (!contentToVerify) {
       return this.DEFAULT_NOT_AVAILABLE
     }
     return contentToVerify

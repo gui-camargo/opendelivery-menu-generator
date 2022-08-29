@@ -80,6 +80,24 @@
             {{DEFAULT_NOT_AVAILABLE}}
           </ng-template>
         </li>
+        <li class="nutritional-item">
+          <span class="title">
+            isAlcoholic:
+          </span>
+          {{verifyExistsContent(ITEM?.nutritionalInfo?.isAlcoholic)}}
+        </li>
+        <li class="nutritional-item">
+          <span class="title">
+            unit:
+          </span>
+          {{verifyExistsContent(ITEM?.unit)}}
+        </li>
+        <li class="nutritional-item">
+          <span class="title">
+            Ean:
+          </span>
+          {{verifyExistsContent(ITEM?.ean)}}
+        </li>
       </ul>
 
     </div>
@@ -102,7 +120,7 @@
               <span class="option-name pl-2">{{getItemById(option?.itemId)?.name}}</span>
               <span class="option-max_permitted"> - Max Permitted: {{option?.maxPermitted}} </span>
             </div>
-            <span class="option-value">{{option?.price?.value | currency:"BRL"}}</span>
+            <span class="option-value">{{option?.price?.value | currency: DEFAULT_CURRENCY_PIPE}}</span>
           </div>
 
           <p class="option__description">{{getItemById(option?.itemId)?.description}}</p>
@@ -118,7 +136,7 @@
   <footer class="item-footer mt-3 d-flex justify-content-end">
     <h2 class="price">
       Price:
-      {{ITEM_OFFER?.price?.value | currency}}
+      {{ITEM_OFFER?.price?.value | currency: DEFAULT_CURRENCY_PIPE }}
     </h2>
   </footer>
 </main>

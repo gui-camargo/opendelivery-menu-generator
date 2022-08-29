@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IFormSubmit } from '../models/form-submit';
 import { IMerchant } from '../models/merchant';
@@ -35,14 +35,14 @@ export class MenuGeneratorComponent implements OnInit {
   onSubmit(): void {
     try {
       const jsonString = this.getFormControls.json.value
-      
+
       const merchant: IMerchant = JSON.parse(jsonString)
       this.merchantService.setMerchant(merchant)
       this.navigateToMenu();
     }
     catch (error: any) {
       this.showError = true;
-      throw Error(error)    
+      throw Error(error)
     }
   }
 
