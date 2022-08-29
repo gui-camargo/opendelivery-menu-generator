@@ -1,0 +1,141 @@
+@use "src/assets/scss/colors"as *;
+
+.container-fluid {
+
+  .menu-header {
+    border: 1px solid $light-grey;
+    border-top: none;
+    margin: 0;
+  }
+
+  .menu__title {
+    padding-left: 30px;
+  }
+
+  .type-btn {
+    color: $black;
+    font-weight: 700;
+    border-radius: 4px;
+  }
+
+  .mat-button-toggle-checked {
+    background-color: $yellow;
+  }
+
+  .mat-button-toggle {
+    border-radius: 4px;
+    background-color: $light-grey;
+  }
+
+  .mat-button-toggle.mat-button-toggle-checked {
+    background-color: $yellow;
+  }
+
+  .mat-button-toggle-group {
+    border: none;
+  }
+
+  .active {
+    background-color: $yellow;
+  }
+
+  .type {
+    padding: 10px 8px;
+    color: $black;
+    font-weight: 700;
+  }
+
+  .moto-img {
+    align-items: center;
+    height: 31px;
+  }
+
+  .accordion-button {
+    background-color: $yellow;
+    height: 60px;
+
+    .category__name {
+      color: $black;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+
+    .category__id {
+      color: $black;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .price-div {
+    display: flex;
+    justify-self: end;
+    margin: auto;
+  }
+
+  .accordion-body {
+    border: 1px solid $light-grey;
+  }
+
+  .item-offer__img {
+    padding: 10px;
+    height: 250px;
+    align-items: center;
+  }
+
+  .item-offer__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .item-offer__id {
+    color: $black;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .item-offer__description {
+    color: $grey;
+    margin-top: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .details {
+    font-weight: 700;
+    color: $grey;
+
+    .details-img {
+      margin-right: 5px;
+    }
+  }
+
+  .user-img {
+    margin-right: 5px;
+  }
+
+  .user {
+    background-color: $yellow;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-weight: 700;
+  }
+
+  .price {
+    background-color: $red;
+    color: $white;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-weight: 700;
+  }
+
+}
+
+@media screen and (max-width:740px) {
+  .delivery-type {
+    display:none !important;
+  }
+}
