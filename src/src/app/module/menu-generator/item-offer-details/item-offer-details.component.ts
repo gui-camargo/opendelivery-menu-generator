@@ -12,7 +12,7 @@ import { MerchantService } from '../../service/merchant.service';
 export class ItemOfferDetailsComponent implements OnInit {
 
   constructor(private merchantService: MerchantService, @Inject(MAT_DIALOG_DATA) private itemOfferId: string, public dialogRef: MatDialogRef<ItemOfferDetailsComponent>) { }
-  DEFAULT_NOT_AVAILABLE: string = "N/A"
+  readonly DEFAULT_NOT_AVAILABLE: string = "N/A"
 
   readonly ICONS = {
     close: {
