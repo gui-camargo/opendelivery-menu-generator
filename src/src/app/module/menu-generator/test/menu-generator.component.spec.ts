@@ -9,7 +9,7 @@ import { MenuGeneratorComponent } from '../menu-generator.component';
 import { routes } from '../../../app-routing.module'
 import { By } from '@angular/platform-browser';
 
-describe('MenuValidatorComponent', () => {
+describe('MenuGeneratorComponent', () => {
   let router: Router
   let location: Location
   let component: MenuGeneratorComponent;
@@ -91,10 +91,4 @@ describe('MenuValidatorComponent', () => {
     detectChanges()
     expect(controlJson?.valid).toBeFalsy()
   })
-
-  it('should', fakeAsync(() => {
-    const json = "string"
-    component.form.controls['json'].setValue(json)
-    expect(component.form.controls.json.value).toEqual(json);
-  }));
 });

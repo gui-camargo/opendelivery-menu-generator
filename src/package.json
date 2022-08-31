@@ -2,13 +2,12 @@
   "name": "open-delivery-menu-web",
   "version": "0.0.0",
   "scripts": {
-    "cypress": "cypress run",
-    "cypress:open": "cypress open",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --base-href=https://programmersit.github.io/opendelivery-menu-generator/ "
   },
   "private": true,
   "dependencies": {
@@ -22,7 +21,6 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "cypress": "^10.6.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
