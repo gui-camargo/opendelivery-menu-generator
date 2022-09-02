@@ -6,6 +6,7 @@ import { ViewMenuComponent } from './module/menu-generator/view-menu/view-menu.c
 export const routes: Routes = [
   { path: '', component: MenuGeneratorComponent, title: "Open Delivery - Menu Generator" },
   { path: 'menu', component: ViewMenuComponent, title: "Open Delivery - Menu Generator" },
+  { path: '**', redirectTo: "" },
 ];
 
 @NgModule({
