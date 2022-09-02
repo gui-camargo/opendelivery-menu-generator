@@ -19,12 +19,12 @@
         <h6>{{BASIC_INFO?.name}}</h6>
         <h6 class="merchant__sub-title"> Description:
           <span class="sub-title__content">
-            {{BASIC_INFO?.corporateName}}
+            {{BASIC_INFO?.description}}
           </span>
         </h6>
         <h6 class="merchant__sub-title">
           Categories:
-          <span class="sub-title__content">
+          <span class="sub-title__content categories">
             <ng-container *ngFor="let category of BASIC_INFO?.merchantCategories; let indexCategory = index">
               {{category}}
               <ng-container *ngIf="indexCategory >= 0">

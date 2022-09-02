@@ -59,6 +59,10 @@
           font-weight: 400;
           text-transform: lowercase;
         }
+
+        &>.categories {
+          text-transform: uppercase;
+        }
       }
     }
 

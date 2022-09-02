@@ -14,7 +14,6 @@ export class MerchantBasicInfoComponent implements OnInit {
 
   constructor(private merchantService: MerchantService, private router: Router) { }
 
-
   serviceSubscribe: Subscription = new Subscription();
 
   public serviceActive?: IService;
