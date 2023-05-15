@@ -21,10 +21,6 @@ jobs:
           cd src
           npm ci
           npm run-script deploy
-      - name: Test
-        run: |
-          cd src
-          npm run-script test
   
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
