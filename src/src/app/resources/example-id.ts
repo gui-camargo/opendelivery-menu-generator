@@ -1,3 +1,4 @@
 export enum ExamplesEnum {
-    Pizza = 1
+  Pizza_EN = 1,
+  Pizza_PT = 2,
 }
